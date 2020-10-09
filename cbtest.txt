@@ -1,0 +1,28 @@
+Cross Browser Test
+Conducted 10/08/20 on crossbrowsertesting.com
+
+Chrome - NO ISSUES
+
+Firefox - NO ISSUES
+
+Microsoft Edge - NO ISSUES
+
+Safari - NO ISSUES
+
+
+
+
+
+(Internet Explorer 11 - [NOT REQUIRED]
+
+  Profile Image rounded corners missing
+
+  Button styling on links and buttons missing
+
+  Grid background missing
+
+  Grid does not display correctly on smaller window size
+
+  Animation does not Work
+
+  Link colors incorrect (uses blue and purple instead of red and green))
