@@ -15,7 +15,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
 </head>
 
@@ -63,14 +63,21 @@
   </main>
 
   <form action="#" method="post" id="contact-form">
-    <label class="standard-label" for="contact-email">E-mail: </label>
-    <input type="email" id="contact-email" required>
 
-    <label class="standard-label" for="contact-phone">Telephone: </label>
-    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone">
+    <div class="input-wrapper">
+      <label class="standard-label" for="contact-email">E-mail: </label>
+      <input type="email" id="contact-email" required>
+    </div>
 
-    <label class="standard-label" for="contact-message">Message: </label>
-    <textarea maxlength="240" id="contact-message" required></textarea>
+    <div class="input-wrapper">
+      <label class="standard-label" for="contact-phone">Telephone: </label>
+      <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone">
+    </div>
+
+    <div class="input-wrapper">
+      <label class="standard-label" for="contact-message">Message: </label>
+      <textarea maxlength="240" id="contact-message" required></textarea>
+    </div>
 
     <input class="button" type="submit" value="Send message">
   </form>
@@ -85,7 +92,7 @@
   </footer>
 
   <!--<script src="js/tota11y.min.js"></script>-->
-
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
