@@ -2,6 +2,7 @@
   let form = document.querySelector('#contact-form');
   let emailInput = document.querySelector('#contact-email');
   let phoneInput = document.querySelector('#contact-phone');
+  let messageInput = document.querySelector('#contact-message');
 
   function showErrorMessage(input, message) {
     let container = input.parentElement;
@@ -56,10 +57,23 @@
     return true;
   }
 
+  function validateMessage() {
+    let message = messageInput.value;
+
+    if (!message) {
+      showErrorMessage(messageInput, 'Message is a required field.')
+      return false;
+    }
+
+    showErrorMessage(messageInput, null);
+    return true;
+  }
+
   function validateForm() {
     let isValidEmail = validateEmail();
     let isValidPhone = validatePhone();
-    return isValidEmail && isValidPhone;
+    let isValidMessage = validateMessage();
+    return isValidEmail && isValidPhone && isValidMessage;
   }
 
   form.addEventListener('submit', (e) => {
@@ -71,4 +85,5 @@
 
   emailInput.addEventListener('input', validateEmail);
   phoneInput.addEventListener('input', validatePhone);
+  messageInput.addEventListener('input', validateMessage);
 })();
