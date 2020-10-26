@@ -1,7 +1,7 @@
 (function() {
   let form = document.querySelector('#contact-form');
   let emailInput = document.querySelector('#contact-email');
-  let telephoneInput = document.querySelector('#contact-phone');
+  let phoneInput = document.querySelector('#contact-phone');
 
   function showErrorMessage(input, message) {
     let container = input.parentElement;
@@ -37,8 +37,29 @@
     showErrorMessage(emailInput, null);
     return true;
   }
+
+  function validatePhone() {
+    let number = phoneInput.value;
+
+    if (!number) {
+      showErrorMessage(phoneInput, 'Phone # is a required field.');
+      return false;
+    }
+
+    let format = /^\(?([0-9]{3})\)?[-]?([0-9]{3})[-]?([0-9]{4})$/;
+
+    if (!number.match(format)) {
+      showErrorMessage(phoneInput, 'Phone # must use XXX-XXX-XXXX format.')
+      return false;
+    }
+    showErrorMessage(phoneInput, null);
+    return true;
+  }
+
   function validateForm() {
-    return validateEmail();
+    let isValidEmail = validateEmail();
+    let isValidPhone = validatePhone();
+    return isValidEmail && isValidPhone;
   }
 
   form.addEventListener('submit', (e) => {
@@ -49,4 +70,5 @@
   });
 
   emailInput.addEventListener('input', validateEmail);
+  phoneInput.addEventListener('input', validatePhone);
 })();
