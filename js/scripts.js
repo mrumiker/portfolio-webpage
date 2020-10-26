@@ -38,8 +38,7 @@
     return true;
   }
   function validateForm() {
-    let isValidEmail = validateEmail();
-    return isValidEmail;
+    return validateEmail();
   }
 
   form.addEventListener('submit', (e) => {
