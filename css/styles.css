@@ -187,6 +187,11 @@ svg {
   width: 50%;
 }
 
+.app-screen-shot {
+  max-width: 100%;
+  object-fit: scale-down; 
+}
+
 @supports (display: grid) {
   .grid {
     display: grid;
