@@ -192,6 +192,13 @@ svg {
   object-fit: scale-down; 
 }
 
+.app-info {
+  background-color: var(--grid-background);
+  padding: var(--primary-padding);
+  width: auto;
+  min-height: auto;
+}
+
 @supports (display: grid) {
   .grid {
     display: grid;
