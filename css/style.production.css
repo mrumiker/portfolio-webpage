@@ -26,7 +26,7 @@ Secondary Color (PapayaWhip): #FFEFD5  */
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -40,7 +40,8 @@ p,
 a,
 table,
 ul,
-form {
+form,
+.input-wrapper {
   font-size: inherit;
   line-height: 25px;
 }
@@ -52,8 +53,8 @@ form {
   width: 100%;
   padding: 20px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav {
@@ -63,8 +64,8 @@ nav {
 
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 
 .page-header__item:first-child {
@@ -73,8 +74,8 @@ nav {
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -108,8 +109,8 @@ ul {
 
 .profile__text {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 100px;
-  flex: 1 1 100px;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
 }
 
 .page-footer {
@@ -119,8 +120,8 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
@@ -190,7 +191,9 @@ button:focus,
 .social-media__item:hover,
 .social-media__item:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+.app-link:hover,
+.app-link:focus {
   cursor: pointer;
   opacity: 0.7;
 }
@@ -208,6 +211,23 @@ button:focus,
 svg {
   height: 50%;
   width: 50%;
+}
+
+.app-screen-shot {
+  max-width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down; 
+}
+
+.app-info {
+  background-color: var(--grid-background);
+  padding: var(--primary-padding);
+  width: auto;
+  min-height: auto;
+}
+
+.app-link {
+  width: 50px;
 }
 
 @supports (display: grid) {
@@ -268,28 +288,45 @@ svg {
 @-webkit-keyframes bird-fly {
   from {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   to {
     -webkit-transform: translate(1000px, 0);
-    transform: translate(1000px, 0);
+            transform: translate(1000px, 0);
   }
 }
 
 @keyframes bird-fly {
   from {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   to {
     -webkit-transform: translate(1000px, 0);
-    transform: translate(1000px, 0);
+            transform: translate(1000px, 0);
   }
 }
 
 .bird {
   -webkit-animation: 10s bird-fly infinite alternate linear;
-  animation: 10s bird-fly infinite alternate linear;
+          animation: 10s bird-fly infinite alternate linear;
+}
+
+.input-wrapper {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+label {
+  display: inline-block;
+  min-width: 75px;
+}
+
+.error-message {
+  position: absolute;
+  color: var(--primary-color);
+  font-size: 0.8em;
 }

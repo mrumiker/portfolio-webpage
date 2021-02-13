@@ -167,7 +167,9 @@ button:focus,
 .social-media__item:hover,
 .social-media__item:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+.app-link:hover,
+.app-link:focus {
   cursor: pointer;
   opacity: 0.7;
 }
@@ -197,6 +199,10 @@ svg {
   padding: var(--primary-padding);
   width: auto;
   min-height: auto;
+}
+
+.app-link {
+  width: 50px;
 }
 
 @supports (display: grid) {
