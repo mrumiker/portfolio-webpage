@@ -230,6 +230,17 @@ svg {
   height: 50px;
 }
 
+.inline-container {
+  position: relative;
+}
+
+.inline-logo {
+  height: 2em; 
+  position: absolute; 
+  top: 50%; 
+  transform: translate(0, -50%);
+} 
+
 @supports (display: grid) {
   .grid {
     display: -ms-grid;
@@ -247,16 +258,7 @@ svg {
     margin: 0;
   }
 
-  .inline-container {
-    position: relative;
-  }
-  
-  .inline-logo {
-    height: 2em; 
-    position: absolute; 
-    top: 50%; 
-    transform: translate(0, -50%);
-  } 
+
 
   /* .grid__item:last-child
   {
