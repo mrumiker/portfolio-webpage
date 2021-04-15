@@ -23,7 +23,7 @@ Secondary Color (PapayaWhip): #FFEFD5  */
 
 body {
   background-color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto Slab', serif;
   padding: var(--primary-padding);
 }
 
@@ -33,9 +33,11 @@ a,
 table,
 ul,
 form,
+address,
 .input-wrapper {
   font-size: inherit;
   line-height: 25px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .page-header {
