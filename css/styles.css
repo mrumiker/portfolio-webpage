@@ -123,8 +123,10 @@ h2 {
 }
 
 address {
+  display: flex;
+  justify-content: center;
   font-style: normal;
-  line-height: 20px;
+  text-align: justify;
 }
 
 thead {
@@ -216,7 +218,11 @@ svg {
   position: absolute; 
   top: 50%; 
   transform: translate(0, -50%);
-} 
+}
+
+.contact-info {
+  text-align: center;
+}
 
 @supports (display: grid) {
   .grid {
