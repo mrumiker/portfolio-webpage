@@ -248,7 +248,7 @@ svg {
   } */
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 768px) {
   .grid {
     grid-gap: 10px;
   }
@@ -260,6 +260,10 @@ svg {
 
   h1 {
     font-size: 22px;
+  }
+
+  .page-header {
+    padding: 0;
   }
 }
 
