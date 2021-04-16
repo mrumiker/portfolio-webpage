@@ -36,8 +36,13 @@ form,
 address,
 .input-wrapper {
   font-size: inherit;
-  line-height: 25px;
+  line-height: 40px;
   font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  line-height: normal;
+  margin-bottom: 10px;
 }
 
 .page-header {
@@ -122,11 +127,14 @@ h2 {
   margin: auto;
 }
 
-address {
+.center-justify {
   display: flex;
   justify-content: center;
-  font-style: normal;
   text-align: justify;
+}
+
+address {
+  font-style: normal;
 }
 
 thead {
@@ -224,6 +232,10 @@ svg {
   text-align: center;
 }
 
+.tiny-text {
+  font-size: 10px;
+}
+
 @supports (display: grid) {
   .grid {
     display: grid;
@@ -238,6 +250,7 @@ svg {
     min-height: auto;
     margin: 0;
   }
+
 
   /* .grid__item:last-child
   {
@@ -264,6 +277,10 @@ svg {
 
   .page-header {
     padding: 0;
+  }
+
+  .tiny-text {
+    font-size: 6px;
   }
 }
 
