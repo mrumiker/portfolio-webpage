@@ -134,8 +134,9 @@ h2 {
   text-align: justify;
 }
 
-address {
+address p {
   font-style: normal;
+  line-height: 35px;
 }
 
 thead {
