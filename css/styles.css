@@ -36,7 +36,7 @@ form,
 address,
 .input-wrapper {
   font-size: inherit;
-  line-height: 40px;
+  line-height: 25px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -93,13 +93,14 @@ ul {
 
 .profile__portrait {
   float: left;
-  width: 250px;
+  width: 300px;
   margin-right: 40px;
   border-radius: var(--rounding);
 }
 
 .profile__text {
   flex: 1 1 100px;
+  text-align: center;
 }
 
 .page-footer {
@@ -193,7 +194,14 @@ button:focus,
 
 .grid__item {
   display: inline-block;
+  position: relative;
   width: 33%;
+}
+
+.bottom-link {
+  position: absolute; 
+  left: var(--primary-padding); 
+  bottom: var(--primary-padding);
 }
 
 svg {
@@ -204,6 +212,7 @@ svg {
 .app-screen-shot {
   max-width: 100%;
   object-fit: scale-down; 
+  margin-bottom: 20px;
 }
 
 .app-info {
