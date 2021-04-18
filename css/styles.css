@@ -48,8 +48,12 @@ li {
   margin-bottom: 10px;
 }
 
-form, label {
+label {
   margin: var(--primary-padding);
+}
+
+form {
+  margin: 20px;
 }
 
 .page-header {
@@ -253,6 +257,14 @@ svg {
   align-items: center;
 }
 
+.contact-details {
+  display: flex;  
+}
+
+.contact-details a {
+  margin: 0 20px;
+}
+
 .tiny-text {
   font-size: 10px;
 }
@@ -318,6 +330,12 @@ svg {
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .contact-details a {
+    margin: 0 10px;
   }
 }
 
