@@ -135,6 +135,7 @@ h2 {
   font-size: 30px;
 }
 
+
 .centered {
   display: flex;
   flex-direction: column;
@@ -321,8 +322,10 @@ svg {
     flex-direction: column;
   }
 
-  .page-header{
+  .page-header {
     padding: 0;
+    position: fixed;
+    z-index: 1;
   }
 
   .page-header a {

@@ -28,6 +28,32 @@
     <a href="index.html">
       <img src="img/logo.svg" alt="Charles Umiker" class="page-header__item" />
     </a>
+    <!-- Menu for Mobile -->
+    <nav class="mobile-navigation mobile-menu">
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="mobile-navigation hidden">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menu for Desktop -->
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list">
         <li role="presentation">
@@ -47,7 +73,7 @@
   </header>
 
   <section class="main">
-    <h1 style="margin-left: 8px;">My Work</h1>
+    <h1 style="text-align: center;">My Projects</h1>
     <div class="grid">
 
       <div class="grid__item">
@@ -127,7 +153,7 @@
   </footer>
 
   <!--<script src="js/tota11y.min.js"></script>-->
-
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
