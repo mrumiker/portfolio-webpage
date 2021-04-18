@@ -40,6 +40,10 @@ address,
   font-family: 'Montserrat', sans-serif;
 }
 
+table {
+  width: 40%;
+}
+
 li {
   line-height: normal;
   margin-bottom: 10px;
@@ -124,14 +128,16 @@ h2 {
 }
 
 .centered {
-  text-align: center;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .center-justify {
   display: flex;
-  justify-content: center;
+  align-items: center;
   text-align: justify;
+  flex-direction: column;
 }
 
 address p {
