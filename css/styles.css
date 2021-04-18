@@ -89,12 +89,12 @@ ul {
 .profile {
   max-width: 700px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .profile__portrait {
-  float: left;
   width: 300px;
-  margin-right: 40px;
   border-radius: var(--rounding);
 }
 
@@ -283,6 +283,10 @@ svg {
 
   h1 {
     font-size: 22px;
+  }
+
+  .profile {
+    flex-direction: column;
   }
 
   .page-header {
