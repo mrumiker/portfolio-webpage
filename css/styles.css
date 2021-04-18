@@ -48,6 +48,10 @@ li {
   margin-bottom: 10px;
 }
 
+form, label {
+  margin: var(--primary-padding);
+}
+
 .page-header {
   display: flex;
   width: 100%;
