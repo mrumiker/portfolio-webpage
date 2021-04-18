@@ -139,7 +139,7 @@ h2 {
   flex-direction: column;
 }
 
-address p {
+address {
   font-style: normal;
   line-height: 35px;
 }
@@ -244,7 +244,9 @@ svg {
 }
 
 .contact-info {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tiny-text {
