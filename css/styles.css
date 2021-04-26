@@ -175,6 +175,13 @@ a:active {
   color: var(--link-active);
 }
 
+.secret:link,
+.secret:visited,
+.secret:hover {
+  text-decoration: none;
+  color: black;
+}
+
 button,
 .button,
 .button:visited {
