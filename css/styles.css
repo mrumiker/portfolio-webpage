@@ -273,6 +273,10 @@ svg {
   margin: 0 20px;
 }
 
+.bio {
+  max-width: 60%;
+}
+
 .tiny-text {
   font-size: 10px;
 }
@@ -403,6 +407,10 @@ svg {
   span.change:nth-child(3) {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .bio {
+    max-width: 90%;
   }
 
   .tiny-text {
