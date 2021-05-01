@@ -79,22 +79,18 @@
   </header>
 
   <main class="contact-info">
-    <h2>Contact Me</h2>
 
-    <form class="centered" action="https://formspree.io/f/mgervyow" method="POST">
-      <label class="standard-label">
-        Your email:
-        <input type="email" name="_replyto" required>
-      </label>
-      <label class="standard-label">
-        Your message:
-        <textarea name="message" required></textarea>
-      </label>
-
-      <!-- your other form fields go here -->
-
-      <input class="button" type="submit" value="Send" />
-    </form>
+    <section id="contact-form">
+      <h2>Contact Me</h2>
+      <form id="contact" name="contact" accept-charset="utf-8" action="https://formspree.io/f/mgervyow" method="POST">
+        <label><span>Name</span><input name="name" type="text" placeholder="Your Name" required /></label>
+        <label><span>Email</span><input name="_replyto" type="email" placeholder="Your Email Address"
+            required /></label>
+        <label><span>Message</span><textarea name="message" placeholder="Your Message" maxlength="350"
+            required></textarea></label>
+        <input class="button" name="submit" type="submit" value="Send" />
+      </form>
+    </section>
 
     <ul class="contact-details">
       <a href="mailto:mrumiker@gmail.com" target="_blank">

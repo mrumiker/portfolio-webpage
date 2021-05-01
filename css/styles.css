@@ -25,6 +25,7 @@ body {
   background-color: white;
   font-family: 'Roboto Slab', serif;
   padding: .1px var(--primary-padding);
+  overflow-x: hidden;
 }
 
 header,
@@ -285,6 +286,93 @@ svg {
   display: none;
 }
 
+#contact-form {
+  max-width: 1208px;
+  max-width: 75.5rem;
+  margin: 0 auto;
+}
+
+#contact, label, input[name="submit"], button {
+  position: relative;
+}
+
+label > span, input, textarea {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+}
+
+label > span {
+  display: none;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  font: 300 100%/1.2 Ubuntu, sans-serif;
+}
+
+input[type="text"], input[type="email"], textarea {
+  margin: 0 0 1em;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  height: 6em;
+}
+
+
+@media screen and (min-width: 30em) {
+  #contact-form h2 {
+    margin-left: 26.3736%;
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  label > span {
+    vertical-align: top;
+    display: inline-block;
+    width: 30%;
+    padding: 0.5em;
+    border: 1px solid transparent;
+    text-align: right;
+  }
+  input, textarea, button {
+    width: 70%;
+    line-height: 1.5;
+  }
+  textarea {
+    height: 10em;
+  }
+  input[type="submit"], button {
+    width: 70%;
+    margin-left: 13%;
+  }
+}
+@media screen and (min-width: 48em) {
+  #contact-form {
+    text-align: justify;
+    line-height: 0;
+  }
+  #contact-form:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+ 
+  #contact-form form, #contact-form aside {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+}
+
 @supports (display: grid) {
   .grid {
     display: grid;
@@ -418,6 +506,7 @@ svg {
   }
 }
 
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
@@ -451,7 +540,7 @@ svg {
   animation: 10s bird-fly infinite alternate linear;
 }
 
-label {
+/* label {
   display: inline-block;
   min-width: 75px;
 }
@@ -459,6 +548,6 @@ label {
 input,
 textarea {
   margin: 0 10px;
-}
+} */
 
 
