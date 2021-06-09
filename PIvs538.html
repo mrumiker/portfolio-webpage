@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Meet App</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap&family=Roboto+Slab:wght@500;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a href="index.html">
+      <img src="img/logo.svg" alt="Charles Umiker" class="page-header__item" />
+    </a>
+    <!-- Menu for Mobile -->
+    <nav class="mobile-navigation mobile-menu">
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="mobile-navigation hidden">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menu for Desktop -->
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="app-info main">
+    <a href="work.html" class="secret">⬅️</a>
+    <h1>PredictIt vs. 538</h1>
+    <div class="app-links">
+      <a href="https://mrumiker.github.io/meet/" target="_blank"><img class="app-link" src="img/meet-app-192.png"
+          alt="meet app logo" /></a>
+      <a href="https://github.com/mrumiker/meet/" target="_blank">
+        <img class="app-link" src="img/GitHub-Mark.png" alt="GitHub logo" />
+      </a>
+    </div>
+    <p>Meet App is a serverless, single page, progressive web application that gives users the inside track to the
+      happenings in
+      their city and around the world.</p>
+
+    <p>Users can search events by city and limit the number of events displayed. Event elements can be expanded to
+      reveal more information. The app boasts lightning-fast
+      performance after it is loaded.</p>
+
+    <p>Desktop users can enjoy <b>Data Visualization</b> of the distribution of events and topics, built with
+      <b>ReCharts</b>.
+    </p>
+    <a href="https://mrumiker.github.io/meet/" target="_blank"><img src="img/MeetAppSS.png"
+        alt="View of Meet App with Pie Chart and Scatter Chart" class="app-screen-shot" /></a>
+
+    <p>The app was built with <b>React</b>, using the <b>test-driven development (TDD)</b> method. It uses <b>AWS</b> as
+      its "serverless" server and gathers data from the <b>Google Calendar API</b>. </p>
+
+    <p>I developed the app by writing <b>Jest </b>Unit and Integration tests first, and then writing the App's code to
+      pass the
+      tests. While this was challenging, I learned a great deal about writing effective tests and asynchronous behavior.
+    </p>
+
+    <p>The app is continuously monitored by <b>Atatus</b>.</p>
+
+    <p>This is a <b>Progressive Web Application (PWA)</b> that can run online or offline, and can be installed as a
+      standalone app.</p>
+    <p>I used <b>Object Oriented Programming (OOP)</b> in JavaScript to design colored Alerts that appear to help the
+      user navigate the site. See if you can find all four alerts!</p>
+    <br />
+    <p>I came a long way as a programmer while creating Meet App. I feel more in command of React, having completed two
+      React projects. Testing was a real challenge! I hope you enjoy exploring Meet App.</p>
+    <p>Nota Bene: The Meet App link above requires authorization to access. Please <a href="contact.html">Contact Me</a>
+      if you would like to be authorized.</p>
+    <p><i>Want to Learn More?</i> Check out my <a href="files/MeetAppCaseStudy.pdf" target="_blank">DETAILED CASE
+        STUDY</a> about this project. (PDF Format)</p>
+    <a href="work.html" class="secret">⬅️</a> <a href="work.html">Back to Projects</a>
+
+  </section>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
