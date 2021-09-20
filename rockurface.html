@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>RockUrFace Marketplace</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap&family=Roboto+Slab:wght@500;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a href="index.html">
+      <img src="img/logo.svg" alt="Charles Umiker" class="page-header__item" />
+    </a>
+    <!-- Menu for Mobile -->
+    <nav class="mobile-navigation mobile-menu">
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="mobile-navigation hidden">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menu for Desktop -->
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="app-info main">
+    <a href="work.html" class="secret">⬅️</a>
+    <h1>RockUrFace Marketplace</h1>
+    <div class="app-links">
+      <a href="https://github.com/mrumiker/ebay-clone" target="_blank">
+        <img class="app-link" src="img/GitHub-Mark.png" alt="GitHub logo" />
+      </a>
+    </div>
+    <p>Do you dig tunes?</p>
+    <p><b>RockUrFace Marketplace</b> is a Full Stack <b>Python/Django</b> eCommerce web application for buying and
+      selling
+      Classic Albums.
+    </p>
+
+    <a href="https://github.com/mrumiker/ebay-clone" target="_blank"><img src="img/RockUrFaceScreenShot.png"
+        alt="View of RockUrFace Marketplace site with Albums for sale" class="app-screen-shot" /></a>
+
+    <p>With an attractive, <b>responsive</b> user interface, you can post your albums, bid on others, or just browse and
+      enjoy the selection.
+    </p>
+
+    <p>The RockUrFace Marketplace site runs on a <b>SQLite database</b> consisting of these features:</p>
+
+    <ul>
+      <li><b>Albums</b> (including Title, Artist, Year, Description, and linked to Users who posted and bid on the
+        album, and
+        multiple Genres and multiple Watchers for each album, which allows users to maintain a 'Watchlist' of albums)
+      </li>
+      <li><b>Users</b> (including Username, hashed Password)</li>
+      <li><b>Genres</b> (including name and description)</li>
+      <li><b>Bids</b> (including amounts, each linked to a particular Album and User)</li>
+      <li><b>Comments</b> (including comment text and datetime, each linked to a particular Album and User)</li>
+    </ul>
+    <p>RockUrFace Marketplace originated as a <a href="https://cs50.harvard.edu/web/2020/projects/2/commerce/"
+        target="_blank">project</a> for Harvard's <a href="https://cs50.harvard.edu/web/2020/projects/2/commerce/"
+        target="_blank">CS50 Web Programming course</a>.</p>
+    <h2>Video Walkthrough</a></h2>
+    <p><a href="https://youtu.be/gGYqQsDHh4g">See the site in action!</a></p>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/gGYqQsDHh4g" class="embedded-video"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div><br />
+    <h3>Want to try it out?</h3>
+    <p>Go to the <a href="https://github.com/mrumiker/ebay-clone" target="_blank">RockUrFace Marketplace GitHub repo</a>
+      and follow the instructions to get rocking. 🎸 🎹 🥁 🎙️ 🎚️ 🧑‍🎤</p>
+    <h3>Built with:</h3>
+    <ul>
+      <li>Django</li>
+      <li>Python</li>
+      <li>SQLite3</li>
+      <li>Bootstrap</li>
+    </ul>
+    <br />
+    <div style="line-height: 40px;">
+      <b>Code: <span class="inline-container"><a href="https://github.com/mrumiker/ebay-clone" target="_blank">
+            <img class="app-link inline-logo" src="img/GitHub-Mark.png" alt="GitHub logo" /></a></span></b><br />
+    </div>
+    <a href="work.html" class="secret">⬅️</a> <a href="work.html">Back to Projects</a>
+  </section>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
