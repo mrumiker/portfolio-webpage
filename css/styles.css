@@ -402,6 +402,7 @@ textarea {
     width: auto;
     min-height: auto;
     margin: 0;
+    border: 1px solid black;
   }
 
 
