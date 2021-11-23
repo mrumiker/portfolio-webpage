@@ -295,6 +295,7 @@ svg {
   padding: var(--primary-padding);
   width: auto;
   min-height: auto;
+  border: 1px solid black;
 }
 
 .app-link {
@@ -652,3 +653,4 @@ input,
 textarea {
   margin: 0 10px;
 } */
+
