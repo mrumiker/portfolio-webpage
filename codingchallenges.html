@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Coding Challenges</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap&family=Roboto+Slab:wght@500;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.production.css" />
+
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a href="index.html">
+      <img src="img/logo.svg" alt="Charles Umiker" class="page-header__item" />
+    </a>
+    <!-- Menu for Mobile -->
+    <nav class="mobile-navigation mobile-menu">
+
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="mobile-navigation hidden">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item--active">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Menu for Desktop -->
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item  navigation-list__item--active">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="centered about">
+    <a href="about.html"><img src="img/SelfPortrait.jpg" class="profile__portrait"
+        alt="A photo of Charles Umiker" /></a>
+
+    <h1 style="margin: 10px">Dirac Dice: an Advent of Code Challenge</h1>
+    <div class="bio">
+      <p>Games, alternate universes, quantum physics. These were some of the things I was thinking about in December of
+        2021.</p>
+      <p>This was puzzle #21 of the <a href="https://adventofcode.com" target="_blank">Advent of Code</a> - It’s a game:
+        two players, a circular board with 10 spaces
+        marked 1 - 10, and one three-sided die (an engineering marvel in itself!). On each turn, the player rolls the
+        die three times and moves that
+        many spaces. After those three moves, the player ends up on a numbered space and adds that space’s number to her
+        total score. First player to 21 wins!</p>
+      <p>Simple enough, but here’s the twist: these are special Dirac dice (named for quantum physicist <a
+          href="https://en.wikipedia.org/wiki/Paul_Dirac" target="_blank">Paul Dirac</a>) and
+        each time the die is rolled, the universe splits into multiple copies, one for each possible roll of the die.
+        The problem was, given any starting spaces for players 1 and 2, to figure out which player would win in more
+        universes and exactly how many universes that would be.</p>
+      <p>
+        The challenge of this was to write a program that could handle this calculation, which would end up being in the
+        hundreds of trillions. What I couldn’t do was simulate the game hundreds of trillions of times - my MacBook
+        could not handle that amount of processing. So my task was to break the problem down and see how I could
+        simplify it as much as possible.
+      </p>
+      <p>One point of simplification is the fact that we are examining ALL possible scenarios, which takes the element
+        of
+        chance (and perhaps fun) out of the game. We can figure out that if you roll a three sided die three times, and
+        create a universe for each possible outcome, there are 7 possible totals, with 3 being the lowest and 9 being
+        the highest. Additionally, there is only one way to roll a 3 (three ones) and a 9 (three threes), so there’s
+        only going to be one universe created for each of those. The in-between numbers have more possible combinations,
+        with a 4 or 8 having 3 combos, 5 or 7 having 6 combos, and the most likely roll, 6, having 7 combos. This means
+        that there will always be 27 universes created out of any turn in any particular universe, but only 7 different
+        kinds of universes. Already, we are seeing that there is redundancy and predictability in this game that we can
+        use to our advantage.</p>
+      <p>Now what is a “scenario” exactly? I thought about what would be the minimum amount of information I would need
+        to describe the state of a game at any point. It’s something like this:</p>
+      <ol>
+        <li>Player 1’s point total</li>
+        <li>The space player 1 is on</li>
+        <li>Player 2’s point total</li>
+        <li>The space player 2 is on</li>
+        <li>Whose turn it is</li>
+      </ol>
+      <p>That’s it! If you were playing the game, and you had to put it away and go save the universe or something, you
+        could write down this info and be able to pick up right where you left off. Describing a game scenario this way,
+        there are “only” 40,000 different possible game situations you can have at one time - a lot, but way less than
+        900 trillion. So instead of simulating games, you can count scenarios.</p>
+      <p>
+        So I made a <a href="https://www.javascripttutorial.net/javascript-objects/" target="_blank">JavaScript
+          object</a> to keep count of each of those 40,000 possible game scenarios. At every turn, the
+        die is rolled, we look at the old object and dump the new counts into the new object. When any of the scores go
+        above 20, we add those totals to the winning player’s win count. Once all the games reach 21 points or higher,
+        we’re done (this takes about 19 rounds).
+      </p>
+      <b>🥁 <a href="https://github.com/mrumiker/aoc-2021/blob/main/day21/solutionB.js" target="_blank">My Solution</a>
+        🥁</b>
+      <p>I had a lot of fun doing Advent of Code this year, and learned a great deal about tricky things like recursion
+        and scope of variables. I ended up with 39 out of 50 solved, and third place on my local leaderboard. This was
+        the solution I was proudest of - it felt good to get an exact answer in the hundreds of trillions in under a
+        quarter of a second.</p>
+      <p>In my journey into coding I’ve found that I enjoy these coding puzzles most of all - I like coming up with my
+        own ways to solve these and working the old 🧠. Thanks for reading!</p>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>Find me on</p>
+    <div class="social-media">
+      <a href="https://www.youtube.com/latinology" target="_blank"><img class="social-media__item" src="img/Youtube.svg"
+          alt="youtube" /></a>
+      <a href="https://www.linkedin.com/in/charles-umiker-921181209/" target="_blank"><img class="social-media__item"
+          src="img/Linkedin.svg" alt="linkedin" /></a>
+      <a href="https://github.com/mrumiker" target="_blank"><img class=" social-media__item" src="img/GitHub-Mark.png"
+          alt="GitHub" style="width: 30px;" /></a>
+    </div>
+  </footer>
+
+  <!--<script src="js/tota11y.min.js"></script>-->
+  <script src="js/scripts.js" async defer></script>
+</body>
+
+</html>
